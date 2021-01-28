@@ -6,7 +6,12 @@
 trigger:
   branches:
     include:
-      - refs/tags/new
+    - master
+    - releases/*
+    - feature/*
+    exclude:
+    - releases/old*
+    - feature/*-working
 pool:
   vmImage: 'ubuntu-latest'
 
